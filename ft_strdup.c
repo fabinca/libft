@@ -1,0 +1,32 @@
+/* DESCRIPTION         top */
+/* The strdup() function returns a pointer to a new string which is */
+/* a duplicate of the string s.  Memory for the new string is */
+/* obtained with malloc(3), and can be freed with free(3). */
+/* RETURN VALUE         top */
+/* On success, the strdup() function returns a pointer to the */
+/* duplicated string.  It returns NULL if insufficient memory was */
+/* available, with errno set to indicate the error. */
+/* ERRORS         top */
+/* ENOMEM Insufficient memory available to allocate duplicate string */
+#include <malloc.h>
+
+char *strdup(const char *s)
+{
+    char *ptr;
+    size_t len;
+    size_t i;
+
+    len = 0;
+    while (*(s + len))
+        len++;
+    ptr = (char *)malloc(len);
+    if (!ptr)
+        return (0);
+    i = 0;
+    while (*(s + i))
+    {
+        ptr[i] = s[i];
+        i++;
+    }
+    return (ptr);
+}
