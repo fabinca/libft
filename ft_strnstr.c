@@ -1,5 +1,16 @@
-/* The functions return a reference to the first occurrence of the pattern in str. */
-/* not more than the number of characters specified by a parameter, are matched */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/14 12:20:46 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/14 12:21:13 by cfabian          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* not more than the number of characters specified by a parameter,are matched*/
 /* The strnstr() function locates the first occurrence of the null-termi- */
 /* nated string s2 in the string s1, where not more than n characters are */
 /* searched.  Characters that appear after a `\0' character are not */
@@ -9,9 +20,9 @@
 /* NULL is returned; otherwise a pointer to the first character of the first */
 /* occurrence of s2 is returned. */
 #include <unistd.h>
-int		ft_cmp(char *s1, char *s2)
+int	ft_cmp(char *s1, char *s2)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[i] != '\0')
@@ -25,11 +36,11 @@ int		ft_cmp(char *s1, char *s2)
 
 char	*ft_strnstr(const char *str, const char *pattern, size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (*pattern == 0)
-		return(str);
+		return (str);
 	while (i < len)
 	{
 		if (ft_cmp(pattern, str + i) == 0)

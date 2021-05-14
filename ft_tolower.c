@@ -1,4 +1,16 @@
-/* The C library function int tolower(int c) converts a given letter to lowercase. */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/14 12:25:39 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/14 12:26:05 by cfabian          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*The C library function tolower converts a given letter to lowercase.*/
 /* Declaration int tolower(int c); */
 /* Parameters c − This is the letter to be converted to lowercase. */
 /* This function returns lowercase equivalent to c, if such value exists, */

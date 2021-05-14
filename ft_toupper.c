@@ -1,4 +1,16 @@
-/* The C library function int toupper(int c) converts a given letter to uppercase. */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/14 12:26:29 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/14 12:26:41 by cfabian          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* The C library function toupper converts a given letter to uppercase. */
 /* Declaration int toupper(int c); */
 /* Parameters c − This is the letter to be converted to uppercase. */
 /* This function returns uppercase equivalent to c, if such value exists, */

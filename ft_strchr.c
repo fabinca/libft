@@ -1,4 +1,15 @@
-/* The strchr() function returns a pointer to the first occurrence  */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/14 12:01:27 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/14 12:03:13 by cfabian          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /* of the character c in the string s. */
 /* Here "character" means "byte"; these functions do not work with */
 /* wide or multibyte characters. */
@@ -7,15 +18,15 @@
 /* terminating null byte is considered part of the string, so that */
 /* if c is specified as '\0', these functions return a pointer to */
 /* the terminator. */
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    while (*s)
-    {
-        if (*s == c)
-            return (s);
-        s++;
-    }
-    if (c == 0)
-        return (s);
-    return (0);
+	while (*s)
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	if (c == 0)
+		return (s);
+	return (0);
 }

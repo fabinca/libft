@@ -1,4 +1,15 @@
-/* DESCRIPTION         */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/14 11:58:15 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/14 11:58:54 by cfabian          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /* The memcpy() function copies n bytes from memory area src to */
 /* memory area dest.  The memory areas must not overlap.  Use */
 /* memmove(3) if the memory areas do overlap. */
@@ -9,20 +20,19 @@
 /* C standards are explicit that employing memcpy() with overlapping */
 /* areas produces undefined behavior.) */
 /* Note that the purpose of restrict is to show only syntax. It doesn't */
-/* change anything in output (or logic). It is just a way for programmer */
+/* cange anything in output (or logic). It is just a way for programmer */
 /* to tell compiler about an optimization  */
-
 #include <unistd.h>
 
-void *ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (i < n)
-    {
-        *((char *)dest + i) = *((char *)src + i);
-        i++;
-    }
-    return (dest);
+	i = 0;
+	while (i < n)
+	{
+		*((char *)dest + i) = *((char *)src + i);
+		i++;
+	}
+	return (dest);
 }

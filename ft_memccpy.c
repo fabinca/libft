@@ -1,4 +1,15 @@
-/* DESCRIPTION         */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/14 11:52:37 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/14 11:53:09 by cfabian          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /* The memccpy() function copies no more than n bytes from memory area src to */
 /* memory area dest, stopping when the character c is found.  */
 /* If the memory areas overlap the results are undefined */
@@ -11,17 +22,17 @@
 
 #include <unistd.h>
 
-void *ft_memccpy(void *restrict dest, const void *restrict src, int c, size_t n)
+void	*ft_memccpy(void *restrict d, const void *restrict src, int c, size_t n)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (i < n)
-    {
-        if (*((char *)src + i) == c)
-            return (dest + i);
-        *((char *)dest + i) = *((char *)src + i);
-        i++;
-    }
-    return (NULL);
+	i = 0;
+	while (i < n)
+	{
+		if (*((char *)src + i) == c)
+			return (d + i);
+		*((char *)d + i) = *((char *)src + i);
+		i++;
+	}
+	return (NULL);
 }
