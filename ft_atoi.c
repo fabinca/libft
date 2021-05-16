@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 10:49:06 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/16 10:28:29 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/16 12:05:13 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,33 @@
 /* RETURN VALUE         top */
 /* The converted value or 0 on error. */
 
+#include <stdio.h>
+
 int	ft_atoi(const char *str)
 {
 	unsigned int	i;
 	int				num;
-	int				pos_or_neg;
+	int				neg;
 
 	i = 0;
 	num = 0;
-	pos_or_neg = 1;
+	neg = 0;
 	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
 		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
 		i++;
 	if (str[i] == '-')
-		pos_or_neg = -1;
+		neg = 1;
 	if (str[i] == '+' || str[i] == '-')
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		num = num * 10 + (str[i] - '0');
 		i++;
-		if (num == 214748364 && pos_or_neg == -1 && str[i] == '8')
-			return (-2147483648);
+		if (num == 214748364 && neg == 0 && str[i] == '8')
+			return (0);
 	}
-	num = num * pos_or_neg;
+	if (neg == 1)
+		num = num * -1;
+	printf("neg: %d \n", neg);
 	return (num);
 }
