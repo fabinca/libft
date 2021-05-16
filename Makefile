@@ -1,30 +1,30 @@
-#$(NAME), all, clean, fclean and re.
-
 NAME	= libft
+SRCS 	= ft_memset.c ft_bzero.c ft_memcpy.c ft_atoi.c
+OBJS	= $(SRCS:.c=.o)
 CC		= gcc
 CFLAGS	= -Werror -Wall -Wextra -I.
-DEPS	= libft.h
-BIN		= a.out
+RM		= rm -f
 
-#rule 1
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-$(NAME): *.o
-	$(CC) $(CFLAGS) -o $(BIN) *.o
+.c.o: 
+		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) 
 
-#rule 2
-all:
+$(NAME):$(OBJS)
+		ar rc libft.a $(OBJS)
 
-#rule 3
+test:	norm re
+		$(CC) $(CFLAGS) -o $(NAME).out main.c -L. -lft
+		./$(NAME).out
+
+all:	$(NAME) main.c
+		ranlib $(NAME).a
+
 clean:
-	-rm edit $(objects)
+		$(RM) $(OBJS)
 
-#rule 4
-fclean:
+fclean:	clean
+		$(RM) $(NAME)
 
-#rule : 
-re:
+re: 	fclean all
 
-#rule 6
 norm:
-	norminette *.c
+		norminette $(SRCS)

@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:14:56 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 11:15:27 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/16 21:52:57 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 #include <unistd.h>
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 
@@ -29,4 +29,5 @@ void	ft_bzero(void *s, size_t n)
 		*((char *)s + i) = 0;
 		i++;
 	}
+	return (s);
 }

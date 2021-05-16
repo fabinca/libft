@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 14:10:30 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 20:52:43 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/16 21:45:21 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (!s[i])
 			break ;
-		
 		while (s[i] != c && s[i] != 0)
 		{
 			strings[n][j] = s[i];
