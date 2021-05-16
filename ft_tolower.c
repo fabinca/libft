@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:25:39 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:26:05 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/16 10:48:55 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c >= 'A' & c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }
