@@ -1,5 +1,5 @@
 NAME	= libft
-SRCS 	= ft_memset.c ft_bzero.c ft_memcpy.c ft_atoi.c
+SRCS 	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_atoi.c
 OBJS	= $(SRCS:.c=.o)
 CC		= gcc
 CFLAGS	= -Werror -Wall -Wextra -I.
@@ -12,7 +12,7 @@ $(NAME):$(OBJS)
 		ar rc libft.a $(OBJS)
 
 test:	norm re
-		$(CC) $(CFLAGS) -o $(NAME).out main.c -L. -lft
+		$(CC) -o $(NAME).out main.c -L. -lft
 		./$(NAME).out
 
 all:	$(NAME) main.c

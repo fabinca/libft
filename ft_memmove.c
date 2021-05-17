@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:59:09 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 11:59:51 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/17 09:08:22 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,23 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-	void	*temp;
 
 	i = 0;
-	while (i < n)
+	if (dest <= src)
 	{
-		*((char *)temp + i) = *((char *)src + i);
-		i++;
+		while (i < n)
+		{
+			*((char *)dest + i) = *((char *)src + i);
+			i++;
+		}
 	}
-	i = 0;
-	while (i < n)
+	else
 	{
-		*((char *)dest + i) = *((char *)temp + i);
-		i++;
+		while (n > 0)
+		{
+			n--;
+			*((char *)dest + n) = *((char *)src + n);
+		}
 	}
 	return (dest);
 }
