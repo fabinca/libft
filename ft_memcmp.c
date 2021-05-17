@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:54:14 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 11:58:01 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/17 09:58:27 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ int	memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (*((unsigned char *)s1 + i) != *((unsigned char *)s2 + i))
 			return (*((unsigned char *)s1 + i) - *((unsigned char *)s2 + i));
-		if (*((unsigned char *)s1 + i) == 0 && *((unsigned char *)s2 + i) != 0)
-			break ;
 		i++;
 	}
 	return (0);

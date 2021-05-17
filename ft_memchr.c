@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:54:02 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 11:54:04 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/17 09:53:28 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (*((char *)s + i) == c)
-			return (s);
+			return ((void *)s + i);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
