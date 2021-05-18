@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:20:46 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:21:13 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 10:44:18 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
 /* NULL is returned; otherwise a pointer to the first character of the first */
 /* occurrence of s2 is returned. */
 #include <unistd.h>
-int	ft_cmp(char *s1, char *s2)
+size_t	ft_strlen(const char *str);
+
+int	ft_cmp(const char *s1, const char *s2)
 {
 	int	i;
 
@@ -37,14 +39,17 @@ int	ft_cmp(char *s1, char *s2)
 char	*ft_strnstr(const char *str, const char *pattern, size_t len)
 {
 	size_t	i;
+	size_t	pattern_len;
 
 	i = 0;
 	if (*pattern == 0)
-		return (str);
-	while (i < len)
+		return ((char *)str);
+	pattern_len = ft_strlen(pattern);
+	while (i <= len - pattern_len)
 	{
 		if (ft_cmp(pattern, str + i) == 0)
-			return (str + i);
+			return ((char *)str + i);
+		i++;
 	}
 	return (0);
 }
