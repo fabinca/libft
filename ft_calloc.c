@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:36:37 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 11:39:17 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 12:11:11 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,24 +31,15 @@
 /* ENOMEM Out of memory.  Possibly, the application hit the */
 /* RLIMIT_AS or RLIMIT_DATA limit described in getrlimit(2). */
 #include <malloc.h>
+void	*ft_bzero(void *s, size_t n);
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	size_t	i;
 
-	if (nmemb == 0 || size == 0)
-		return (0);
-	if (nmemb * size > 2147483647)
-		return ("Error");
 	ptr = (void *)malloc(nmemb * size);
 	if (ptr == NULL)
-		return (ptr);
-	i = 0;
-	while (i < nmemb * size)
-	{
-		*((char *)ptr + i) = 0;
-		i++;
-	}
+		return (NULL);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
