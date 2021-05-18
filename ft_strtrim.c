@@ -6,11 +6,12 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:22:42 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:24:40 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 12:53:35 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <malloc.h>
+size_t	ft_strlen(char const *str);
 
 int	char_in_set(char a, char const *set)
 {
@@ -24,16 +25,6 @@ int	char_in_set(char a, char const *set)
 		i++;
 	}
 	return (0);
-}
-
-size_t	ft_strlen(char const *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len] != 0)
-		len++;
-	return (len);
 }
 
 char	*ft_strncpy(char *dest, const char *src, size_t size)
@@ -71,6 +62,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 			break ;
 	}
 	ptr = (char *)malloc(end - start + 1);
-	ft_strncpy(ptr, (s1 + start), end - start);
+	ft_strncpy(ptr, (s1 + start), end - start + 1);
 	return (ptr);
 }
