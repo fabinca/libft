@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:26:29 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/16 10:49:42 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 11:46:43 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /* else c remains unchanged. The value is returned as an int value that can  */
 /* be implicitly casted to char. */
 
-int	ft_tolower(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);
