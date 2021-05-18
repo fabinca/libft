@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:01:27 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:03:13 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 10:09:38 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == c)
-			return (s);
+			return ((char *)s);
 		s++;
 	}
 	if (c == 0)
-		return (s);
+		return ((char *)s);
 	return (0);
 }
