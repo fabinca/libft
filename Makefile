@@ -1,11 +1,12 @@
 NAME	= libft
-SRCS 	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_atoi.c
+SRCS 	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c ft_atoi.c
 OBJS	= $(SRCS:.c=.o)
 CC		= gcc
 CFLAGS	= -Werror -Wall -Wextra -I.
 RM		= rm -f
+HEAD	= libft.h
 
-.c.o: 
+%.o: %.c $(HEAD)
 		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) 
 
 $(NAME):$(OBJS)

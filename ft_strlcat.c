@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:11:28 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:18:43 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 09:58:32 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t size)
 	while (dest[i] != 0)
 		i++;
 	strl_dest = i;
-	i++;
 	while ((src[j] != 0) && (j < (size - strl_dest - 1)))
 	{
 		dest[i] = src[j];
