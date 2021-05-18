@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:03:22 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:05:23 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 12:17:35 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 /* ENOMEM Insufficient memory available to allocate duplicate string */
 #include <malloc.h>
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*ptr;
 	size_t	len;
