@@ -6,11 +6,13 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 13:36:16 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 13:42:13 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 13:22:15 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <malloc.h>
+
+size_t	ft_strlen(const char *str);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -21,9 +23,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!str)
 		return (0);
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		str[i] = f(i, s[i]);
+		str[i] = f(1, s[i]);
 		i++;
 	}
 	return (str);
