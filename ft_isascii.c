@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/13 18:16:47 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 11:13:13 by cfabian          ###   ########.fr       */
+/*   Created: 2021/05/18 11:11:06 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/18 11:12:17 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* A printable character is a character that is not a control character. */
-/* Declaration int isprint(int c); */
-/* Parameters c − This is the character to be checked. */
-/* This function returns a non-zero value(true) if c is a */
-/* printable character else, zero (false). */
-
-int	ft_isprint(int c)
+int	ft_isascii(int c)
 {
-	if (c >= 32 && c <= 126)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
