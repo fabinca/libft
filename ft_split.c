@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 14:10:30 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/16 21:45:21 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 13:03:09 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 /* terminate **Str array with a 0 pointer*/
 #include <malloc.h>
 
-int	ft_nb_parts(char *s, char c)
+int	ft_nb_parts(const char *s, char c)
 {
 	size_t	i;
 	size_t	parts;
@@ -60,7 +60,9 @@ char	**ft_split(char const *s, char c)
 		{
 			strings[n][j] = s[i];
 			i++;
+			j++;
 		}
-		strings[n][j]
+		n++;
 	}
+	return (strings);
 }
