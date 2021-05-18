@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:24:53 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:25:29 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/18 12:40:46 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = start;
 	while (*(s + i) != 0 && i - start < len)
 	{
-		ptr[i] = s[i];
+		ptr[i - start] = s[i];
 		i++;
 	}
 	ptr[i] = 0;
