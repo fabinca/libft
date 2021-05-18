@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/14 14:10:30 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 13:03:09 by cfabian          ###   ########.fr       */
+/*   Created: 2021/05/18 14:02:55 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/18 15:04:09 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,19 @@
 /* terminate **Str array with a 0 pointer*/
 #include <malloc.h>
 
+char	*ft_substr(char const *s, unsigned int start, char len);
+void	*ft_calloc(size_t nmemb, size_t size);
+
+size_t	ft_strlen_c(char *str, char end)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len] != 0 && str[len] != end)
+		len++;
+	return (len);
+}
+
 int	ft_nb_parts(const char *s, char c)
 {
 	size_t	i;
@@ -27,7 +40,7 @@ int	ft_nb_parts(const char *s, char c)
 	parts = 0;
 	while (s[i])
 	{
-		while (s[i] == c && s[i] != 0)
+		while (s[i] == c)
 			i++;
 		if (s[i])
 			parts++;
@@ -37,32 +50,50 @@ int	ft_nb_parts(const char *s, char c)
 	return (parts);
 }
 
+void	free_all(char **ptr, size_t n)
+{
+	while (ptr[0])
+	{
+		free(ptr[n]);
+		n--;
+	}
+	free(ptr);
+}
+
+int	next_part(const char *s, char c, size_t *i)
+{
+	while (s[*i] == c && s[*i] != 0)
+		*i = *i + 1;
+	if (s[*i] == 0)
+		return (0);
+	return (1);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	size_t	j;
 	size_t	i;
 	size_t	n;
+	size_t	len;
 	char	**strings;
 
-	strings = (char **)malloc(8 * (ft_nb_parts(s, c) + 1));
+	strings = (char **)calloc(8, (ft_nb_parts(s, c) + 1));
 	if (!strings)
 		return (0);
 	i = 0;
 	n = 0;
 	while (s[i])
 	{
-		j = 0;
-		while (s[i] == c && s[i] != 0)
-			i++;
-		if (!s[i])
+		if (!next_part(s, c, &i))
 			break ;
-		while (s[i] != c && s[i] != 0)
+		len = ft_strlen_c((char *)s + i, c);
+		strings[n] = ft_substr(s, i, len);
+		if (strings[n] == 0 && s[i] != 0)
 		{
-			strings[n][j] = s[i];
-			i++;
-			j++;
+			free_all(strings, n);
+			return (0);
 		}
 		n++;
+		i = i + len;
 	}
 	return (strings);
 }
