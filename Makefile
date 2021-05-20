@@ -36,3 +36,6 @@ re: 	fclean all
 
 norm:
 		norminette $(SRCS)
+
+bonus:
+		
