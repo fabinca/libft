@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:58:15 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 11:58:54 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/20 12:18:48 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 /* to tell compiler about an optimization  */
 #include <unistd.h>
 
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 

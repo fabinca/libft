@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:11:28 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 09:58:32 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/20 12:20:13 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@
 /*str).The check exists to prevent potential security probs in incorrect code.*/
 #include <unistd.h>
 
-size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;

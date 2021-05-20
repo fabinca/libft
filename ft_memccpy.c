@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:52:37 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 15:26:53 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/20 12:17:43 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 #include <unistd.h>
 
-void	*ft_memccpy(void *restrict d, const void *restrict s, int c, size_t n)
+void	*ft_memccpy(void *d, const void *s, int c, size_t n)
 {
 	size_t	i;
 
