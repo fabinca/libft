@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_listnew.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 13:36:40 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/20 14:02:11 by cfabian          ###   ########.fr       */
+/*   Created: 2021/05/20 14:28:49 by cfabian           #+#    #+#             */
+/*   Updated: 2021/05/21 20:40:20 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*new;
+	t_list	*last;
 
-	new = (void *)ft_calloc(8, 2);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
