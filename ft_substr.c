@@ -6,22 +6,27 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:24:53 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 12:40:46 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 14:54:01 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <malloc.h>
+size_t	ft_strlen(const char *str);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*ptr;
+	size_t	s_len;
 
+	s_len = ft_strlen(s);
+	if (s_len - start < len)
+		len = s_len - start;
 	ptr = (char *)malloc(len + 1);
 	if (!ptr)
 		return (0);
 	i = start;
-	while (*(s + i) != 0 && i - start < len)
+	while (i - start < len && *(s + i) != 0)
 	{
 		ptr[i - start] = s[i];
 		i++;

@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 14:02:55 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 15:49:39 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 16:13:08 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 	size_t	len;
 	char	**strings;
 
-	strings = (char **)calloc(8, (ft_nb_parts(s, c) + 1));
+	strings = (char **)ft_calloc(8, (ft_nb_parts(s, c) + 1));
 	if (!strings)
 		return (0);
 	i = 0;

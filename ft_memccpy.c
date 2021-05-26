@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:52:37 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/20 12:17:43 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/21 23:29:11 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memccpy(void *d, const void *s, int c, size_t n)
 	{
 		*((char *)d + i) = *((char *)s + i);
 		if (*((char *)s + i) == c)
-			return (d + i);
+			return (d + i + 1);
 		i++;
 	}
 	return (NULL);

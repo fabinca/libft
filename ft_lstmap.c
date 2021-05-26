@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 20:01:07 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/21 20:40:56 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 16:40:24 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		new = ft_lstnew(f(lst->content));
 		if (!new)
+		{
 			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
 		ft_lstadd_back(&new_lst, new);
 		if (lst->next == NULL)
 			break ;

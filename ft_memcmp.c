@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:54:14 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/17 13:52:39 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 18:04:07 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 /* the difference between the first pair of bytes (interpreted as */
 /* unsigned char) that differ in s1 and s2. */
 /* If n is zero, the return value is zero. */
-#include <unistd.h>
-#include <stdio.h>
+#include <libft.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

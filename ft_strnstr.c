@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:20:46 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 10:44:18 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 12:43:30 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,15 @@ char	*ft_strnstr(const char *str, const char *pattern, size_t len)
 	size_t	pattern_len;
 
 	i = 0;
+	if (ft_strlen(str) < len)
+		len = ft_strlen(str);
+	if (len == 0 || *str == 0)
+		return (0);
 	if (*pattern == 0)
 		return ((char *)str);
 	pattern_len = ft_strlen(pattern);
+	if (pattern_len > len)
+		return (0);
 	while (i <= len - pattern_len)
 	{
 		if (ft_cmp(pattern, str + i) == 0)

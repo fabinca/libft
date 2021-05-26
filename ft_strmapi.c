@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 13:36:16 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 13:22:15 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 16:01:19 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i])
 	{
-		str[i] = f(1, s[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = 0;
 	return (str);
 }

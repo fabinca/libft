@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:46:02 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 11:50:21 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 13:05:31 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ void	putnbr_to_str(int n, char *str, int i)
 	else
 	{
 		str[0] = '-';
-		putnbr_to_str(-n / 10, str, i - 1);
-		putnbr_to_str(-n % 10, str, i);
+		putnbr_to_str(-n, str, i);
 	}
 }
 
@@ -69,7 +68,7 @@ char	*ft_itoa(int n)
 	str = (char *)malloc(strlen + 1);
 	if (str == NULL)
 		return (NULL);
-	putnbr_to_str(n, str, strlen - 1);
 	str[strlen] = 0;
+	putnbr_to_str(n, str, strlen - 1);
 	return (str);
 }

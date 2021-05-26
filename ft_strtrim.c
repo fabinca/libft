@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:22:42 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 12:53:35 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 14:30:07 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	}
 	end = ft_strlen(s1);
-	while (end > 0)
+	while (end > start)
 	{
 		end--;
 		if (!char_in_set(s1[end], set))

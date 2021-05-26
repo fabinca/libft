@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:11:28 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/20 12:20:13 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 15:55:35 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 /*happen (it means that either size is incorrect or that dst isnt a proper “C”*/
 /*str).The check exists to prevent potential security probs in incorrect code.*/
 #include <unistd.h>
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -41,11 +42,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	strl_dest;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != 0)
+	while (dest[i])
 		i++;
 	strl_dest = i;
-	while ((src[j] != 0) && (j < (size - strl_dest - 1)))
+	j = 0;
+	while ((src[j] != 0) && ((int)j < ((int)size - (int)strl_dest - 1)))
 	{
 		dest[i] = src[j];
 		i++;

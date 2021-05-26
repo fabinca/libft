@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:03:22 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 12:17:35 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/26 15:03:11 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strdup(const char *s)
 	len = 0;
 	while (*(s + len))
 		len++;
-	ptr = (char *)malloc(len);
+	ptr = (char *)malloc(len + 1);
 	if (!ptr)
 		return (0);
 	i = 0;
@@ -39,5 +39,6 @@ char	*ft_strdup(const char *s)
 		ptr[i] = s[i];
 		i++;
 	}
+	ptr[i] = 0;
 	return (ptr);
 }
