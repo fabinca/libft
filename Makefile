@@ -6,7 +6,7 @@
 #    By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/27 21:05:06 by cfabian           #+#    #+#              #
-#    Updated: 2021/05/27 21:05:07 by cfabian          ###   ########.fr        #
+#    Updated: 2021/05/27 21:09:34 by cfabian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,5 +62,5 @@ fclean:	clean
 re: 	fclean all
 
 norm:
-		norminette $(SRCS)
+		norminette $(SRCS) libft.h
 		

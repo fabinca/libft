@@ -6,14 +6,14 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 21:05:18 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 21:05:33 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 21:08:02 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
-# include <malloc.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
