@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/05/27 21:05:06 by cfabian           #+#    #+#              #
+#    Updated: 2021/05/27 21:05:07 by cfabian          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME		= libft
 SRCS 		= \
 ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
