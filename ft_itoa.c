@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:46:02 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/26 13:05:31 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:51:54 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*Description Allocates (with malloc(3)) and returns a */
 /* string representing the integer received as an argument. */
 /*Negative numbers must be handled.*/
-#include <malloc.h>
+#include "libft.h"
 
 int	how_many_digits(int n)
 {

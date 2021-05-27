@@ -6,13 +6,11 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:37:08 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 13:32:44 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:53:36 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

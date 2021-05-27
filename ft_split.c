@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 14:02:55 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/26 16:13:08 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 21:02:58 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@
 /* 3. go through string, copy word to new ptr stor in **str array*/
 /* free everything if malloc fails, return 0*/
 /* terminate **Str array with a 0 pointer*/
-#include <malloc.h>
-
-char	*ft_substr(char const *s, unsigned int start, char len);
-void	*ft_calloc(size_t nmemb, size_t size);
+#include "libft.h"
 
 size_t	ft_strlen_c(char *str, char end)
 {

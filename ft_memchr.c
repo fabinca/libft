@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:54:02 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/17 10:21:14 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:52:22 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /* The memchr() and memrchr() functions return a pointer to the */
 /* matching byte or NULL if the character does not occur in the */
 /* given memory area. */
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

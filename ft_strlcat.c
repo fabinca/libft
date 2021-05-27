@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:11:28 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 20:20:07 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:50:49 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@
 /*strlcat() from running off the end of a string.  In practice this should not*/
 /*happen (it means that either size is incorrect or that dst isnt a proper “C”*/
 /*str).The check exists to prevent potential security probs in incorrect code.*/
-#include <unistd.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

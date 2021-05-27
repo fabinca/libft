@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:36:37 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 12:11:11 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:51:24 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@
 /* the following error: */
 /* ENOMEM Out of memory.  Possibly, the application hit the */
 /* RLIMIT_AS or RLIMIT_DATA limit described in getrlimit(2). */
-#include <malloc.h>
-void	*ft_bzero(void *s, size_t n);
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

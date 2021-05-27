@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:52:37 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/21 23:29:11 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:52:13 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 /* change anything in output (or logic). It is just a way for programmer */
 /* to tell compiler about an optimization  */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *d, const void *s, int c, size_t n)
 {

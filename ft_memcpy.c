@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:58:15 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/20 12:18:48 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:52:41 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 /* Note that the purpose of restrict is to show only syntax. It doesn't */
 /* cange anything in output (or logic). It is just a way for programmer */
 /* to tell compiler about an optimization  */
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

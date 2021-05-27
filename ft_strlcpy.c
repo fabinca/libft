@@ -6,11 +6,11 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:19:11 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:19:25 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:54:16 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

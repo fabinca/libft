@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:20:46 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/26 12:43:30 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:54:49 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 /* If s2 is an empty string, s1 is returned; if s2 occurs nowhere in s1, */
 /* NULL is returned; otherwise a pointer to the first character of the first */
 /* occurrence of s2 is returned. */
-#include <unistd.h>
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 int	ft_cmp(const char *s1, const char *s2)
 {

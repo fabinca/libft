@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:14:56 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/16 21:52:57 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:51:10 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /* optimizations will not remove the erase operation if the compiler */
 /* deduces that the operation is "unnecessary". */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_bzero(void *s, size_t n)
 {

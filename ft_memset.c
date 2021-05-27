@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:00:07 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/14 12:01:19 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:53:03 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 /*fills the block of memory using the unsigned char conversion of this value.*/
 /* n − This is the number of bytes to be set to the value. */
 /* This function returns a pointer to the memory area str. */
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t n)
 {

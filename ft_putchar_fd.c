@@ -6,11 +6,11 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:34:52 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 15:39:17 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:53:10 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

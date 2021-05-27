@@ -6,12 +6,11 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:24:53 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/26 14:54:01 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:55:14 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <malloc.h>
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

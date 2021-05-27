@@ -6,12 +6,11 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:22:42 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/26 14:30:07 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:55:07 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <malloc.h>
-size_t	ft_strlen(char const *str);
+#include "libft.h"
 
 int	char_in_set(char a, char const *set)
 {
