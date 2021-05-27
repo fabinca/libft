@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:11:28 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/26 15:55:35 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/27 20:20:07 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,30 +33,27 @@
 /*happen (it means that either size is incorrect or that dst isnt a proper “C”*/
 /*str).The check exists to prevent potential security probs in incorrect code.*/
 #include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
 	size_t	strl_dest;
+	size_t	strl_src;
 
-	i = 0;
-	while (dest[i])
-		i++;
-	strl_dest = i;
+	strl_dest = ft_strlen(dest);
+	strl_src = ft_strlen(src);
+	if (strl_dest > size)
+		return (size + strl_src);
 	j = 0;
-	while ((src[j] != 0) && ((int)j < ((int)size - (int)strl_dest - 1)))
+	i = strl_dest;
+	while (src[j] != 0 && j + strl_dest + 1 < size)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
 	dest[i] = 0;
-	while (src[j] != 0)
-	{
-		j++;
-		i++;
-	}
-	return (i);
+	return (strl_dest + strl_src);
 }
