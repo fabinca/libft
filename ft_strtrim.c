@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:22:42 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/28 20:51:08 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/28 23:31:07 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	end++;
 	ptr = (char *)malloc(end - start + 1);
-	ft_strlcpy(ptr, (s1 + start), end - start + 1);
+	if (ptr)
+		ft_strlcpy(ptr, (s1 + start), end - start + 1);
 	return (ptr);
 }
