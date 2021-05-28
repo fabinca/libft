@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:46:02 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 20:51:54 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/28 22:10:34 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 /*Negative numbers must be handled.*/
 #include "libft.h"
 
-int	how_many_digits(int n)
+size_t	how_many_digits(long int n)
 {
-	int	digits;
+	size_t	digits;
 
 	digits = 1;
 	if (n < 0)
@@ -35,40 +35,35 @@ int	how_many_digits(int n)
 	return (digits);
 }
 
-void	putnbr_to_str(int n, char *str, int i)
+void	putnbr_to_str(unsigned int n, char *str, int pos)
 {
 	if (n >= 10)
 	{
-		putnbr_to_str(n / 10, str, i - 1);
-		putnbr_to_str(n % 10, str, i);
+		putnbr_to_str(n / 10, str, pos - 1);
+		putnbr_to_str(n % 10, str, pos);
 	}
-	else if (n >= 0)
-		str[i] = n + '0';
 	else
-	{
-		str[0] = '-';
-		putnbr_to_str(-n, str, i);
-	}
+		str[pos] = n + '0';
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		strlen;
+	char			*str;
+	size_t			strlen;
+	unsigned int	nbr;
 
-	if (n == -2147483648)
-	{
-		str = (char *)malloc(12);
-		if (str == NULL)
-			return (NULL);
-		str = "-2147483648";
-		return (str);
-	}
 	strlen = how_many_digits(n);
 	str = (char *)malloc(strlen + 1);
 	if (str == NULL)
 		return (NULL);
+	if (n < 0)
+	{
+		str[0] = '-';
+		nbr = (unsigned int)(-n);
+	}
+	else
+		nbr = (unsigned int)n;
 	str[strlen] = 0;
-	putnbr_to_str(n, str, strlen - 1);
+	putnbr_to_str(nbr, str, strlen - 1);
 	return (str);
 }
