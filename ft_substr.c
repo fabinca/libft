@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:24:53 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 20:55:14 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/28 11:45:23 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ptr[i - start] = s[i];
 		i++;
 	}
-	ptr[i] = 0;
+	ptr[i - start] = 0;
 	return (ptr);
 }
