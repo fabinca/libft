@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:59:09 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 20:52:53 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/28 23:04:35 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!src && !dest)
+		return (dest);
 	i = 0;
 	if (dest <= src)
 	{

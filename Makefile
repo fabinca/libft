@@ -6,7 +6,7 @@
 #    By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/27 21:05:06 by cfabian           #+#    #+#              #
-#    Updated: 2021/05/28 21:06:20 by cfabian          ###   ########.fr        #
+#    Updated: 2021/05/29 00:00:48 by cfabian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,5 +62,5 @@ norm:
 		norminette $(SRCS) libft.h
 
 so:
-	$(CC) -fPIC $(CFLAGS) $(SRCS)
-	gcc -shared -o libft.so $(OBJS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)

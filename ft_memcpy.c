@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:58:15 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 20:52:41 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/28 23:48:10 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!src && !dest)
+		return (dest);
 	i = 0;
 	while (i < n)
 	{
