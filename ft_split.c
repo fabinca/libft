@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 14:02:55 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 21:02:58 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/28 14:01:38 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,15 @@ int	ft_nb_parts(const char *s, char c)
 	return (parts);
 }
 
-void	free_all(char **ptr, size_t n)
+void	free_all(char ***ptr, size_t n)
 {
-	while (ptr[0])
+	while (*ptr[0])
 	{
-		free(ptr[n]);
+		free(*ptr[n]);
 		n--;
 	}
-	free(ptr);
+	free(*ptr);
+	ptr = 0;
 }
 
 int	next_part(const char *s, char c, size_t *i)
@@ -73,6 +74,8 @@ char	**ft_split(char const *s, char c)
 	size_t	len;
 	char	**strings;
 
+	if (!s)
+		return (0);
 	strings = (char **)ft_calloc(8, (ft_nb_parts(s, c) + 1));
 	if (!strings)
 		return (0);
@@ -85,10 +88,7 @@ char	**ft_split(char const *s, char c)
 		len = ft_strlen_c((char *)s + i, c);
 		strings[n] = ft_substr(s, i, len);
 		if (strings[n] == 0 && s[i] != 0)
-		{
-			free_all(strings, n);
-			return (0);
-		}
+			free_all(&strings, n);
 		n++;
 		i = i + len;
 	}
