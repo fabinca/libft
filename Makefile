@@ -6,7 +6,7 @@
 #    By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/27 21:05:06 by cfabian           #+#    #+#              #
-#    Updated: 2021/05/27 21:09:34 by cfabian          ###   ########.fr        #
+#    Updated: 2021/05/28 12:34:59 by cfabian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ bonus: $(OBJS) $(OBJS_BONUS)
 
 test:	norm all main.c
 		$(CC) -g -o $(NAME).out main.c -L. -lft
-		./$(NAME).out
+		./$(NAME).out | cat -e
 
 tb:		bonus main_bonus.c
 		norminette $(SRCS_BONUS)
@@ -53,6 +53,7 @@ all:	$(NAME)
 
 clean:
 		$(RM) $(OBJS)
+		$(RM) $(OBJS_BONUS)
 		$(RM) libft.a
 		$(RM) libft.out
 
