@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 20:01:07 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/26 16:40:24 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/05/28 15:29:30 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,22 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
-	t_list	*new_lst;
+	t_list	*start;
 
-	new_lst = ft_lstnew(f(lst->content));
-	new = new_lst;
-	while (1)
+	if (!lst || !f || !del)
+		return (NULL);
+	start = ft_lstnew(f(lst->content));
+	lst = lst->next;
+	while (lst)
 	{
 		new = ft_lstnew(f(lst->content));
 		if (!new)
 		{
-			ft_lstclear(&new_lst, del);
+			ft_lstclear(&start, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new_lst, new);
-		if (lst->next == NULL)
-			break ;
+		ft_lstadd_back(&start, new);
 		lst = lst->next;
 	}
-	return (new_lst);
+	return (start);
 }

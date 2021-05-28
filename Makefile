@@ -6,7 +6,7 @@
 #    By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/27 21:05:06 by cfabian           #+#    #+#              #
-#    Updated: 2021/05/28 12:34:59 by cfabian          ###   ########.fr        #
+#    Updated: 2021/05/28 21:06:20 by cfabian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c
 SRCS_BONUS	= \
 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
 OBJS		= $(SRCS:.c=.o)
 OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 CC			= gcc
@@ -44,24 +45,22 @@ test:	norm all main.c
 		$(CC) -g -o $(NAME).out main.c -L. -lft
 		./$(NAME).out | cat -e
 
-tb:		bonus main_bonus.c
-		norminette $(SRCS_BONUS)
-		$(CC) -g -o bonus.out main_bonus.c -L. -lft
-		./bonus.out
-
 all:	$(NAME)
 
 clean:
 		$(RM) $(OBJS)
 		$(RM) $(OBJS_BONUS)
-		$(RM) libft.a
 		$(RM) libft.out
 
+
 fclean:	clean
-		$(RM) $(NAME)
+		$(RM) $(NAME).a
 
 re: 	fclean all
 
 norm:
 		norminette $(SRCS) libft.h
-		
+
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRCS)
+	gcc -shared -o libft.so $(OBJS)

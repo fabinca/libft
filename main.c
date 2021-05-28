@@ -6,31 +6,6 @@
 #include <bsd/string.h>
 #include "libft.h"
 
-char	*strtrim(char const *s1, char const *set)
-{
-	char	*str;
-	size_t	start;
-	size_t	end;
-
-	if (!s1 || !set)
-		return (NULL);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	end = strlen(s1 + start);
-	if (end)
-	{
-		while (s1[end + start - 1] && ft_strchr(set, s1[end + start - 1]))
-			end--;
-	}
-	str = (char *)malloc(sizeof(char) * end + 1);
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s1 + start, end + 1);
-	str[end] = '\0';
-	return (str);
-}
-
 char	add(unsigned int i, char c)
 {
 	char result;
@@ -252,33 +227,30 @@ int		main(void)
 //	printf("\nTesting ft_strjoin \n");
 //	printf("ft_strjoin(%s, %s) is %s \n", src, src2, ft_strjoin(src, src2)); 
 //
-	printf("\nTesting ft_strtrim \n");
-	printf("ft_strtrim(%s, acb) is %s \n", src, ft_strtrim(src, "acb"));
-	char s1[] = "lorem \n ipsum \t dolor \n sit \t amet";
-	printf("ft_strtrim(%s, ' ') is %s \n", s1, ft_strtrim(s1, " "));
-	char s2[] = "lorem ipsum dolor sit amet";
-	printf("ft_strtrim(%s, 'te') is %s \n", s2, ft_strtrim(s2, "te"));
-	printf("strtrim(%s, 'te') is %s \n", s2, strtrim(s2, "te"));
-	char s3[] = " lorem ipsum dolor sit amet";
-	printf("ft_strtrim(%s, 'l ') is %s \n", s3, ft_strtrim(s3, "l "));
-	printf("strtrim(%s, 'l ') is %s \n", s3, strtrim(s3, "l "));
-	char s4[] = "lorem ipsum dolor sit amet";
-	printf("ft_strtrim(%s, 'tel') is %s \n", s4, ft_strtrim(s4, "tel"));
-	printf("strtrim(%s, 'tel') is %s \n", s4, strtrim(s4, "tel"));
+	//printf("\nTesting ft_strtrim \n");
+	//printf("ft_strtrim(%s, acb) is %s \n", src, ft_strtrim(src, "acb"));
+	//char s1[] = "lorem \n ipsum \t dolor \n sit \t amet";
+	//printf("ft_strtrim(%s, ' ') is %s \n", s1, ft_strtrim(s1, " "));
+	//char s2[] = "lorem ipsum dolor sit amet";
+	//printf("ft_strtrim(%s, 'te') is %s \n", s2, ft_strtrim(s2, "te"));
+	//char s3[] = " lorem ipsum dolor sit amet";
+	//printf("ft_strtrim(%s, 'l ') is %s \n", s3, ft_strtrim(s3, "l "));
+	//char s4[] = "lorem ipsum dolor sit amet";
+	//printf("ft_strtrim(%s, 'tel') is %s \n", s4, ft_strtrim(s4, "tel"));
 //	printf("\nTesting ft_split \n");
 //	strings = ft_split(src, 'c');
 //	
 //	for (int i = 0; strings[i] != 0; i++)
 //		printf("ft_split(%s) is %s / %p \n", src, strings[i], strings[i]);
 //
-	//printf("\nTesting ft_itoa \n");
-	//printf("%d\t -> %s\n", -2147483645, ft_itoa(-2147483645));
-	//printf("%d\t -> %s\n", 2147483647, ft_itoa(2147483647));
-	//printf("%d\t -> %s\n", -77, ft_itoa(-77));
-	//printf("%d\t -> %s\n", -9, ft_itoa(-9));
+	printf("\nTesting ft_itoa \n");
+	printf("%ld\t -> %s\n", -2147483649, ft_itoa(-2147483649));
+	printf("%ld\t -> %s\n", -2147483648, ft_itoa(-2147483648));
+	printf("%lld\t -> %s\n", -2147483648LL, ft_itoa(-2147483648LL));
+	printf("%d\t -> %s\n", -9, ft_itoa(-9));
 //
-	printf("\nTesting ft_strmapi \n");
-	printf("ft_strmapi(%s, add) is %s\n", src, ft_strmapi(src, add));
+	//printf("\nTesting ft_strmapi \n");
+	//printf("ft_strmapi(%s, add) is %s\n", src, ft_strmapi(src, add));
 //
 //	printf("Testing ft_putchar_fd \n");
 //	ft_putchar_fd('a', 1);
