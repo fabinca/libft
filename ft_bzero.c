@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:14:56 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 20:51:10 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:15:34 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*((char *)s + i) = 0;
+		*((unsigned char *)s + i) = 0;
 		i++;
 	}
 	return (s);

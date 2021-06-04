@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 18:16:47 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 11:13:13 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:15:34 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /* Parameters c − This is the character to be checked. */
 /* This function returns a non-zero value(true) if c is a */
 /* printable character else, zero (false). */
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
