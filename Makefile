@@ -6,7 +6,7 @@
 #    By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/27 21:05:06 by cfabian           #+#    #+#              #
-#    Updated: 2021/05/29 00:00:48 by cfabian          ###   ########.fr        #
+#    Updated: 2021/05/31 16:42:13 by cfabian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,11 +50,12 @@ all:	$(NAME)
 clean:
 		$(RM) $(OBJS)
 		$(RM) $(OBJS_BONUS)
-		$(RM) libft.out
-
+		$(RM) $(NAME).out
+		$(RM) a.out
 
 fclean:	clean
 		$(RM) $(NAME).a
+		$(RM) $(NAME).so
 
 re: 	fclean all
 
@@ -63,4 +64,4 @@ norm:
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
+	gcc -nostartfiles -shared -o $(NAME).so $(OBJS) $(OBJS_BONUS)

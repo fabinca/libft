@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 10:49:06 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/28 23:18:24 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:15:34 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 /* strtol(nptr, NULL, 10); except that atoi() does not detect errors. */
 /* RETURN VALUE         top */
 /* The converted value or 0 on error. */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

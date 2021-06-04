@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 11:46:02 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/28 22:10:34 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:23:32 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 /*Negative numbers must be handled.*/
 #include "libft.h"
 
-size_t	how_many_digits(long int n)
+static size_t	how_many_digits(long int n)
 {
 	size_t	digits;
 
@@ -35,7 +35,7 @@ size_t	how_many_digits(long int n)
 	return (digits);
 }
 
-void	putnbr_to_str(unsigned int n, char *str, int pos)
+static void	putnbr_to_str(unsigned int n, char *str, int pos)
 {
 	if (n >= 10)
 	{

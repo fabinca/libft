@@ -6,9 +6,11 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 11:11:06 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 11:12:17 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:22:17 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

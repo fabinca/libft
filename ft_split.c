@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 14:02:55 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/28 13:59:14 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:23:32 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 /* terminate **Str array with a 0 pointer*/
 #include "libft.h"
 
-size_t	ft_strlen_c(char *str, char end)
+static size_t	ft_strlen_c(char *str, char end)
 {
 	size_t	len;
 
@@ -28,7 +28,7 @@ size_t	ft_strlen_c(char *str, char end)
 	return (len);
 }
 
-int	ft_nb_parts(const char *s, char c)
+static int	ft_nb_parts(const char *s, char c)
 {
 	size_t	i;
 	size_t	parts;
@@ -47,7 +47,7 @@ int	ft_nb_parts(const char *s, char c)
 	return (parts);
 }
 
-void	free_all(char ***ptr, size_t n)
+static void	free_all(char ***ptr, size_t n)
 {
 	while (*ptr[0])
 	{
@@ -58,7 +58,7 @@ void	free_all(char ***ptr, size_t n)
 	ptr = 0;
 }
 
-int	next_part(const char *s, char c, size_t *i)
+static int	next_part(const char *s, char c, size_t *i)
 {
 	while (s[*i] == c && s[*i] != 0)
 		*i = *i + 1;

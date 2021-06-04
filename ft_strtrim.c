@@ -6,13 +6,13 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:22:42 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/28 23:31:07 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:23:32 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	char_in_set(char a, char const *set)
+static int	char_in_set(char a, char const *set)
 {
 	size_t	i;
 
@@ -24,20 +24,6 @@ int	char_in_set(char a, char const *set)
 		i++;
 	}
 	return (0);
-}
-
-char	*ft_strncpy(char *dest, const char *src, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < size)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
