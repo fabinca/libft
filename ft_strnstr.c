@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:20:46 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/28 23:10:02 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:23:32 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 /* occurrence of s2 is returned. */
 #include "libft.h"
 
-int	ft_cmp(const char *s1, const char *s2)
+static int	ft_cmp(const char *s1, const char *s2)
 {
 	int	i;
 
