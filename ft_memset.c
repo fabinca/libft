@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:00:07 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/27 20:53:03 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:30:45 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memset(void *str, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*((char *)str + i) = c;
+		*((unsigned char *)str + i) = c;
 		i++;
 	}
 	return (str);
