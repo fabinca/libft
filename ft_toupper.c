@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:26:29 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/18 15:37:59 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:37:58 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 /* This function returns uppercase equivalent to c, if such value exists, */
 /* else c remains unchanged. The value is returned as an int value that can  */
 /* be implicitly casted to char. */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

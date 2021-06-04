@@ -6,7 +6,7 @@
 /*   By: cfabian <cfabian@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 12:25:39 by cfabian           #+#    #+#             */
-/*   Updated: 2021/05/16 10:48:55 by cfabian          ###   ########.fr       */
+/*   Updated: 2021/06/04 17:37:58 by cfabian          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 /* This function returns lowercase equivalent to c, if such value exists, */
 /* else c remains unchanged. The value is returned as an int value that can  */
 /* be implicitly casted to char. */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
